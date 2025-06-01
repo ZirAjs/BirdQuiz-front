@@ -41,3 +41,6 @@ app-example
 # vscode
 .vscode/
 
+.prettierrc
+
+.env

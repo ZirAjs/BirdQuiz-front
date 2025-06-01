@@ -26,6 +26,7 @@ export default function ExerciseView() {
         content="오늘 운새"
         onClick={() => {
           console.log("Card clicked");
+          router.push("/quiz");
         }}
       ></Card>
       <Card
@@ -33,6 +34,7 @@ export default function ExerciseView() {
         content="다시 봅새"
         onClick={() => {
           console.log("Card clicked");
+          router.push("/quiz");
         }}
       ></Card>
     </ThemedScrollView>

@@ -24,6 +24,7 @@ const MAPPING = {
   checkmark: "check",
   "safari.fill": "explore",
   "questionmark.circle.fill": "quiz",
+  "arrow.right": "arrow-forward",
 } as IconMapping;
 
 /**
