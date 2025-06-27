@@ -7,9 +7,9 @@ export type QuizWithAnswer = { quiz: Quiz } & {
   onSelectAnswer: (answer: string) => void;
 };
 
-export const enum QuizType {
-  AUDIO_CHOICE,
-  AUDIO_SHORT,
-  IMAGE_CHOICE,
-  IMAGE_SHORT,
-}
+export type TypedQuiz = Quiz & { type: QuizType };
+
+export type QuizType = {
+  image: boolean;
+  choice: boolean;
+};
