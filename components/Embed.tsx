@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Platform, StyleSheet } from "react-native";
 import { WebView } from "react-native-webview";
-import { ThemedText } from "./ThemedText";
 import { ThemedView } from "./ThemedView";
 
 interface Props {
@@ -15,8 +14,10 @@ const defaultStyles = StyleSheet.create({
     height: 200,
   },
   hiddenStyle: {
-    width: 0,
-    height: 0,
+    width: 290,
+    height: 200,
+    opacity: 0,
+    position: "absolute", // removes from layout flow
   },
 });
 
@@ -68,8 +69,8 @@ export function EmbedHtml({ src, hidden }: Props) {
           domStorageEnabled
           allowsFullscreenVideo
           startInLoadingState
-          onLoadStart={onLoadStart}
-          onLoadEnd={onLoadEnd}
+          // onLoadStart={onLoadStart}
+          // onLoadEnd={onLoadEnd}
         />
       )}
     </ThemedView>
